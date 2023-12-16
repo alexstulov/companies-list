@@ -1,39 +1,120 @@
-.App {
+.app {
+  padding: 0 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+}
+
+.add-company-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.actions-block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table, td, th {
+  border: 1px solid #333;
+}
+
+td {
+  padding-left: 7px;
+}
+
+td:nth-child(1) {
+  padding: 0;
+}
+
+.selected-row {
+  background-color: lightgreen;
+}
+
+.checkbox-cell {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editable-cell {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.table-info-block {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  gap: 7px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.rows-count {
+  color: grey;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+.custom-checkbox {
+  -webkit-appearance: none; /* Remove default appearance */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid darkgreen;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 18px;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked::before,
+.custom-checkbox--checked::before {
+  content: '\2714'; /* check mark symbol Unicode */
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+  color: darkgreen;
+  margin:0;
+  padding:0;
+}
+
+.custom-checkbox:checked,
+.custom-checkbox--semi-checked {
+  background-color: lightgreen;  /* Change background color when checked */
+}
+
+.cell-form {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  gap: 7px;
+}
+
+@media (min-width: 750px) {
+  .wrapper {
+    flex-direction: row;
   }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
+
+  .table-wrapper {
+    width: 48%;
+    max-width: 48%;
   }
 }
