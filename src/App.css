@@ -14,20 +14,6 @@
   width: 100%;
   box-sizing: border-box;
   max-width: 100%;
-  position: relative;
-}
-
-.add-company-form {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.actions-block {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  gap: 7px;
 }
 
 .table {
@@ -99,13 +85,6 @@ td:nth-child(1) {
 .custom-checkbox:checked,
 .custom-checkbox--semi-checked {
   background-color: lightgreen;  /* Change background color when checked */
-}
-
-.cell-form {
-  z-index: 100;
-  position: absolute;
-  display: flex;
-  gap: 7px;
 }
 
 @media (min-width: 750px) {

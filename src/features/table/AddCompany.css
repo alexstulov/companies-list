@@ -1,0 +1,13 @@
+
+.add-company-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+.actions-block {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+  }

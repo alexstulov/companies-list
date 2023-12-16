@@ -1,0 +1,6 @@
+.cell-form {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    gap: 7px;
+  }
